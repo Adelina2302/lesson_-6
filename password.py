@@ -22,10 +22,9 @@ def has_symbols(password):
 
 
 password = input("Введите пароль: ")
-
-
 score = 0
 checks = [has_digit, is_very_long, has_upper_letters, has_lower_letters, has_symbols]
+
 
 for check in checks:
     if check(password):
