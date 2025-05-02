@@ -38,6 +38,6 @@ def main():
 
     print(f"Рейтинг пароля: {score}")
 
-# Блок if __name__ == "__main__"
+
 if __name__ == "__main__":
     main()
