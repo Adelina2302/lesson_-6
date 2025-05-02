@@ -21,13 +21,23 @@ def has_symbols(password):
     return any(char in string.punctuation for char in password)
 
 
-password = input("Введите пароль: ")
-score = 0
-checks = [has_digit, is_very_long, has_upper_letters, has_lower_letters, has_symbols]
+def main():
+    password = input("Введите пароль: ")
+    score = 0
+    checks = [
+        has_digit,
+        is_very_long,
+        has_upper_letters,
+        has_lower_letters,
+        has_symbols,
+    ]
 
+    for check in checks:
+        if check(password):
+            score += 2
 
-for check in checks:
-    if check(password):
-        score += 2
+    print(f"Рейтинг пароля: {score}")
 
-print(f"Рейтинг пароля: {score}")
+# Блок if __name__ == "__main__"
+if __name__ == "__main__":
+    main()
